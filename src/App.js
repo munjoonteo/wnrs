@@ -1,23 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Card from "./Card";
+import "./App.css";
 
 function App() {
+  const [currLevel, setLevel] = React.useState("one");
+  const levels = ["one", "two", "three"];
+  const buttons = levels.map(level => (
+    <button
+      className={`level-button ${level === currLevel ? "selected-level" : ""}`}
+      onClick={() => setLevel(level)}
+    >
+      level {level}
+    </button>
+  ));
+
+  // const bigCardClasses = classNames({
+  //   "big-card": true,
+  //   card: true,
+  // });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="levels">{buttons}</div>
+      <div className="question">
+        <div className="title">we're not really strangers</div>
+        <Card className="card big-card" />
+        <button className="next-card-button">next card</button>
+      </div>
+      <div className="history">
+        <div className="history-title">previous cards</div>
+        <div className="card-container">
+          <div className="card-container-scroll">
+            <Card className="card small-card" />
+            <Card className="card small-card" />
+            <Card className="card small-card" />
+            <Card className="card small-card" />
+            <Card className="card small-card" />
+            <Card className="card small-card" />
+            <Card className="card small-card" />
+            <Card className="card small-card" />
+            <Card className="card small-card" />
+            <Card className="card small-card" />
+            <Card className="card small-card" />
+            <Card className="card small-card" />
+            <Card className="card small-card" />
+            <Card className="card small-card" />
+            <Card className="card small-card" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

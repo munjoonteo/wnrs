@@ -1,38 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Biryani:wght@700;800;900&display=swap");
+
 .App {
+  font-family: "Biryani", sans-serif;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  color: #c10016;
+  font-size: 30px;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.levels {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 30vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.level-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+  border-radius: 15px;
+  border: solid 2px #c10016;
+  background-color: white;
+  height: 88px;
+  width: 231px;
+  text-transform: uppercase;
+  color: #c10016;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Biryani", sans-serif;
+}
+
+.level-button:focus,
+.level-button:active {
+  outline: none;
+}
+
+.selected-level {
+  background-color: #c10016;
+  color: white;
+  outline: none;
+}
+
+.next-card-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px;
+  border-radius: 15px;
+  border: solid 2px #c10016;
+  background-color: white;
+  height: 88px;
+  width: 231px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #c10016;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Biryani", sans-serif;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40vw;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  align-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.history-title {
+  text-transform: uppercase;
+  color: #c10016;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.card-container {
+  height: 75vh;
+  width: 20vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 10px;
+  border-radius: 15px;
+  border: solid 2px #c10016;
 }
 
-.App-link {
-  color: #61dafb;
+.card-container-scroll {
+  width: 96%;
+  height: 96%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.card {
+  color: #c10016;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 50px;
+  border: 0.2px solid black;
+  font-family: "Biryani", sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.big-card {
+  font-size: 25px;
+  width: 30vw;
+  height: 25vh;
+  margin: 5vh;
+}
+
+.small-card {
+  font-size: 20px;
+  width: 18vw;
+  height: 20vh;
+  margin-bottom: 1vh;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c10016;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
