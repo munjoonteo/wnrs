@@ -116,29 +116,6 @@
   overflow-y: scroll;
   overflow-x: hidden;
 }
-.card {
-  color: #c10016;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: 50px;
-  border: 0.2px solid black;
-  font-family: "Biryani", sans-serif;
-}
-
-.big-card {
-  font-size: 25px;
-  width: 30vw;
-  height: 25vh;
-  margin: 5vh;
-}
-
-.small-card {
-  font-size: 20px;
-  width: 18vw;
-  height: 20vh;
-  margin-bottom: 1vh;
-}
 
 ::-webkit-scrollbar {
   width: 10px;

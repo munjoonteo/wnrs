@@ -24,28 +24,28 @@ function App() {
       <div className="levels">{buttons}</div>
       <div className="question">
         <div className="title">we're not really strangers</div>
-        <Card className="card big-card" />
+        <Card styleName="big-card" />
         <button className="next-card-button">next card</button>
       </div>
       <div className="history">
         <div className="history-title">previous cards</div>
         <div className="card-container">
           <div className="card-container-scroll">
-            <Card className="card small-card" />
-            <Card className="card small-card" />
-            <Card className="card small-card" />
-            <Card className="card small-card" />
-            <Card className="card small-card" />
-            <Card className="card small-card" />
-            <Card className="card small-card" />
-            <Card className="card small-card" />
-            <Card className="card small-card" />
-            <Card className="card small-card" />
-            <Card className="card small-card" />
-            <Card className="card small-card" />
-            <Card className="card small-card" />
-            <Card className="card small-card" />
-            <Card className="card small-card" />
+            <Card styleName="small-card" />
+            <Card styleName="small-card" />
+            <Card styleName="small-card" />
+            <Card styleName="small-card" />
+            <Card styleName="small-card" />
+            <Card styleName="small-card" />
+            <Card styleName="small-card" />
+            <Card styleName="small-card" />
+            <Card styleName="small-card" />
+            <Card styleName="small-card" />
+            <Card styleName="small-card" />
+            <Card styleName="small-card" />
+            <Card styleName="small-card" />
+            <Card styleName="small-card" />
+            <Card styleName="small-card" />
           </div>
         </div>
       </div>
