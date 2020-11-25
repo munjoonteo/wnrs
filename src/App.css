@@ -60,7 +60,6 @@
   justify-content: center;
   margin: 25px;
   border-radius: 15px;
-  border: solid 2px #c10016;
   background-color: white;
   height: 88px;
   width: 231px;
@@ -71,6 +70,12 @@
   font-size: 18px;
   font-weight: 500;
   font-family: "Biryani", sans-serif;
+  border: none;
+}
+
+.next-card-button:hover {
+  background-color: #ad0014;
+  color: rgb(240, 240, 240);
 }
 
 .question {
@@ -132,6 +137,3 @@
   border-radius: 50px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
