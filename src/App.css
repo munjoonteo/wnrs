@@ -100,11 +100,12 @@
 
 .card-container {
   height: 75vh;
-  width: 20vw;
+  width: 25vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  align-content: center;
   margin: 10px;
   border-radius: 15px;
   border: solid 2px #c10016;
@@ -115,6 +116,7 @@
   height: 96%;
   overflow-y: scroll;
   overflow-x: hidden;
+  margin: auto;
 }
 
 ::-webkit-scrollbar {
