@@ -196,7 +196,7 @@ function App() {
   const [currCard, setCurrCard] = React.useState(levels[currLevel][0]);
   const [cardHistory, setCardHistory] = React.useState([]);
 
-  const buttons = Object.keys(levels).map(level => (
+  const buttons = Object.keys(levels).map((level) => (
     <button
       className={`level-button ${level === currLevel ? "selected-level" : ""}`}
       onClick={() => handleChangeLevel(level)}
@@ -236,6 +236,21 @@ function App() {
 
   return (
     <div className="App">
+      <div className="credits">
+        <div className="credits-title">how & who</div>{" "}
+        <div className="cont">
+          <b>How to play:</b> <br />
+          Progress from level to level. Become more than strangers, one card at
+          a time.
+          <p>Refresh to reset card decks.</p>{" "}
+          <p>
+            Made by <a href="https://github.com/munjoonteo">@munjoonteo</a> and{" "}
+            <a href="https://github.com/ilyues">@ilyues</a>, inspired by the
+            need to virtually play{" "}
+            <a href="https://www.werenotreallystrangers.com/">WNRS</a>.
+          </p>
+        </div>
+      </div>
       <div className="levels">{buttons}</div>
       <div className="question">
         <div className="title">we're not really strangers</div>
@@ -248,7 +263,7 @@ function App() {
         <div className="history-title">previous cards</div>
         <div className="card-container">
           <div className="card-container-scroll">
-            {cardHistory.map(qn => (
+            {cardHistory.map((qn) => (
               <Card styleName="small-card" question={qn} key={qn} />
             ))}
           </div>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Biryani:wght@700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Biryani:wght@400;700;800;900&display=swap");
 
 .App {
   font-family: "Biryani", sans-serif;
@@ -8,6 +8,56 @@
   align-content: center;
   align-items: center;
   height: 100vh;
+  font-weight: 800;
+}
+
+a,
+a:visited,
+a:hover {
+  color: #c10016;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.credits {
+  font-size: 12px;
+  font-weight: 400;
+  background-color: white;
+  height: auto;
+  text-align: left;
+  max-height: 13px;
+  width: 175px;
+  padding: 4px;
+  top: 30px;
+  left: 40px;
+  padding-left: 10px;
+  border-left: 1px solid #c10016;
+  z-index: 10;
+  position: fixed;
+  overflow: hidden;
+  -webkit-transition: max-height 1.2s ease-in-out;
+  -moz-transition: max-height 1.2s ease-in-out;
+  -o-transition: max-height 1.2s ease-in-out;
+  transition: max-height 1.2s ease-in-out;
+}
+
+.credits:hover {
+  height: auto;
+  max-height: 1000px;
+  transition: max-height 1.2s ease-in-out;
+  -webkit-transition: max-height 1.2s ease-in-out;
+  -moz-transition: max-height 1.2s ease-in-out;
+  -o-transition: max-height 1.2s ease-in-out;
+}
+
+.credits-title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.cont {
+  padding-top: 10px;
+  border-top: 1px solid #eee;
 }
 
 .title {
@@ -15,6 +65,7 @@
   font-size: 30px;
   margin-top: 3vh;
   margin-bottom: 3vh;
+  font-weight: 800;
 }
 
 .levels {
@@ -39,7 +90,7 @@
   text-transform: uppercase;
   color: #c10016;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 800;
   font-family: "Biryani", sans-serif;
 }
 
@@ -68,7 +119,7 @@
   background-color: #c10016;
   outline: none;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 800;
   font-family: "Biryani", sans-serif;
   border: none;
 }
@@ -100,7 +151,7 @@
   text-transform: uppercase;
   color: #c10016;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 800;
 }
 
 .card-container {
@@ -136,4 +187,3 @@
   background: #c10016;
   border-radius: 50px;
 }
-
