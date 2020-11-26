@@ -3,12 +3,13 @@ import Card from "./Card";
 import "./App.css";
 
 function App() {
-  const levels = {
+  let levels = {
     levelOne: ["q1", "hi"],
     levelTwo: ["q2", "sad"],
     levelThree: ["q3"],
   };
 
+  const [gameState] = React.useState(levels);
   const [currLevel, setLevel] = React.useState(Object.keys(levels)[0]);
   const [currCard, setCurrCard] = React.useState(levels[currLevel].shift());
   const [cardHistory, setCardHistory] = React.useState([]);
@@ -17,6 +18,7 @@ function App() {
     <button
       className={`level-button ${level === currLevel ? "selected-level" : ""}`}
       onClick={() => handleChangeLevel(level)}
+      key={level}
     >
       {level.split(/(?=[A-Z])/).join(" ")}
     </button>
@@ -24,19 +26,29 @@ function App() {
 
   function handleChangeLevel(newLevel) {
     setLevel(newLevel);
-    setCurrCard(levels[newLevel].shift());
+    if (gameState[newLevel].length === 0) {
+      const finalMessage = "You have finished this level!";
+      setCurrCard(finalMessage);
+    } else {
+      setCurrCard(gameState[newLevel].shift());
+    }
   }
 
   function handleNextCard() {
-    if (levels[currLevel].length === 0) {
-      setCurrCard("You have finished this level!");
+    const finalMessage = "You have finished this level!";
+    if (gameState[currLevel].length === 0) {
+      if (currCard === finalMessage) {
+        return;
+      } else {
+        const tempHistory = [currCard, ...cardHistory];
+        setCardHistory(tempHistory);
+        setCurrCard(finalMessage);
+      }
     } else {
       const tempHistory = [currCard, ...cardHistory];
       setCardHistory(tempHistory);
-      setCurrCard(levels[currLevel].shift());
+      setCurrCard(gameState[currLevel].shift());
     }
-    console.log(currCard);
-    console.log(levels[currLevel].shift());
   }
 
   return (
@@ -54,7 +66,7 @@ function App() {
         <div className="card-container">
           <div className="card-container-scroll">
             {cardHistory.map(qn => (
-              <Card styleName="small-card" question={qn} />
+              <Card styleName="small-card" question={qn} key={qn} />
             ))}
           </div>
         </div>
