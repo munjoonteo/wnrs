@@ -5,7 +5,6 @@
   justify-content: center;
   text-transform: uppercase;
   font-family: "Biryani", sans-serif;
-  
 }
 
 .big-card {
@@ -31,4 +30,14 @@
   border-radius: 30px;
   box-shadow: 0 5px 4px 2px rgb(187, 187, 187);
   padding: 20px;
+}
+
+@media (min-width: 480px) {
+  div.big-card {
+    font-size: 2vw;
+  }
+
+  div.small-card {
+    font-size: 1vw;
+  }
 }
