@@ -3,6 +3,14 @@ import { createVar, globalStyle } from "@vanilla-extract/css";
 export const primaryAccent = createVar();
 export const primaryAccentMuted = createVar();
 
+globalStyle("*", {
+  boxSizing: "border-box",
+});
+
+globalStyle("html, body, #root", {
+  height: "100%",
+});
+
 globalStyle("body", {
   fontFamily: '"Biryani", sans-serif',
   vars: {

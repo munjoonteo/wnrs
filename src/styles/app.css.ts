@@ -8,8 +8,12 @@ export const appStyles = style({
   flexDirection: "row",
   alignContent: "center",
   alignItems: "center",
-  height: "100vh",
   fontWeight: 800,
+  flexWrap: "wrap",
+  justifyContent: "space-evenly",
+  maxWidth: 1080,
+  margin: "0 auto",
+  height: "100%",
 });
 
 export const titleStyles = style({
@@ -26,10 +30,10 @@ export const levelsStyles = style({
   justifyContent: "center",
   alignContent: "center",
   alignItems: "center",
-  width: "30vw",
+  width: "17rem",
 });
 
-export const levelButtonStlyes = style({
+export const levelButtonStyles = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -90,7 +94,7 @@ export const questionStyles = style({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  width: "40vw",
+  width: "26rem",
   textTransform: "uppercase",
   alignItems: "center",
 });

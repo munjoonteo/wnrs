@@ -5,7 +5,8 @@ import { primaryAccent } from "../../styles/globals.css";
 export const historyStyles = style({
   display: "flex",
   flexDirection: "column",
-  width: "30vw",
+  width: "100%",
+  maxWidth: "17rem",
   alignContent: "center",
   alignItems: "center",
   padding: 5,
@@ -19,8 +20,10 @@ export const historyTitleStyles = style({
 });
 
 export const cardContainerStyles = style({
-  height: "75vh",
-  width: "25vw",
+  height: "100%",
+  minHeight: "30rem",
+  maxHeight: "30rem",
+  width: "100%",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",

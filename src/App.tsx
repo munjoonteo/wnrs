@@ -8,7 +8,7 @@ import Credits from "./components/credits/Credits";
 import CardHistory from "./components/history/CardHistory";
 import {
   appStyles,
-  levelButtonStlyes,
+  levelButtonStyles,
   levelsStyles,
   nextCardButtonStlyes,
   questionStyles,
@@ -62,7 +62,7 @@ function App() {
 
   const buttons = (Object.keys(levels) as levelKey[]).map((level) => (
     <button
-      className={clsx(levelButtonStlyes, { [selectedLevelStyles]: level === currLevel })}
+      className={clsx(levelButtonStyles, { [selectedLevelStyles]: level === currLevel })}
       onClick={() => handleChangeLevel(level)}
       key={level}
     >

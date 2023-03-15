@@ -16,9 +16,9 @@ export const cardStyles = style({
 
 export const bigCardStyles = style({
   fontSize: 25,
-  width: "30vw",
-  height: "30vh",
-  margin: "5vh",
+  width: "100%",
+  height: 300,
+  margin: "2rem",
   backgroundColor: "white",
   color: primaryAccent,
   borderRadius: 50,
@@ -35,12 +35,13 @@ export const bigCardStyles = style({
 });
 
 export const smallCardStyles = style({
-  margin: "auto",
+  // margin: "auto",
   fontSize: 18,
-  width: "18vw",
-  height: "20vh",
-  marginTop: "1vh",
-  marginBottom: "1vh",
+  width: "100%",
+  height: "100%",
+  // marginTop: "",
+  // marginBottom: "1vh",
+  margin: "1rem 0",
   borderRadius: 30,
   boxShadow: `
   0px 0.7px 2.1px rgba(0, 0, 0, 0.018),
