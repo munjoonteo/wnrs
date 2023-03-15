@@ -1,7 +1,11 @@
-import React from "react";
 import "./Card.css";
 
-function Card(props) {
+interface CardProps {
+  styleName: string;
+  question: string;
+}
+
+function Card(props: CardProps) {
   return <div className={`card ${props.styleName}`}>{props.question}</div>;
 }
 
