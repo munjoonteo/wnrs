@@ -17,7 +17,7 @@ module.exports = {
   plugins: ["react", "@typescript-eslint", "simple-import-sort", "unused-imports"],
   rules: {
     "linebreak-style": ["error", "unix"],
-    quotes: ["error", "double"],
+    quotes: ["error", "double", { avoidEscape: true }],
     semi: ["error", "always"],
     "react/react-in-jsx-scope": "off",
     "simple-import-sort/imports": "error",
