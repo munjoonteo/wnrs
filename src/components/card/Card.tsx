@@ -1,5 +1,3 @@
-import "./Card.css";
-
 import { clsx } from "clsx";
 
 import { cardStyles } from "./Card.css";

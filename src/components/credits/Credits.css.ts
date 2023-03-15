@@ -1,6 +1,6 @@
 import { style } from "@vanilla-extract/css";
 
-import { primaryAccent } from "./globals.css";
+import { primaryAccent } from "../../styles/globals.css";
 
 export const creditStyles = style({
   fontSize: 12,

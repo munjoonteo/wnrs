@@ -1,11 +1,13 @@
 import { createVar, globalStyle } from "@vanilla-extract/css";
 
 export const primaryAccent = createVar();
+export const primaryAccentMuted = createVar();
 
 globalStyle("body", {
   fontFamily: '"Biryani", sans-serif',
   vars: {
     [primaryAccent]: "#c10016",
+    [primaryAccentMuted]: "#ad0014",
   },
 });
 

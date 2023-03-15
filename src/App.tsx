@@ -3,13 +3,11 @@ import React from "react";
 
 import { levelOne, levelThree, levelTwo } from "./assets/levels";
 import Card from "./components/card/Card";
-import { bigCardStyles, smallCardStyles } from "./components/card/Card.css";
+import { bigCardStyles } from "./components/card/Card.css";
+import Credits from "./components/credits/Credits";
+import CardHistory from "./components/history/CardHistory";
 import {
   appStyles,
-  cardContainerScrollStyles,
-  cardContainerStyles,
-  historyStyles,
-  historyTitleStyles,
   levelButtonStlyes,
   levelsStyles,
   nextCardButtonStlyes,
@@ -17,7 +15,6 @@ import {
   selectedLevelStyles,
   titleStyles,
 } from "./styles/app.css";
-import { contStyles, creditStyles, creditTitleStyles } from "./styles/credits.css";
 
 function shuffle<T>(array: T[]) {
   let currentIndex = array.length;
@@ -93,18 +90,7 @@ function App() {
 
   return (
     <div className={appStyles}>
-      <div className={creditStyles}>
-        <div className={creditTitleStyles}>how & who</div>
-        <div className={contStyles}>
-          <b>How to play:</b> <br />
-          Progress from level to level. Become more than strangers, one card at a time.
-          <p>Refresh to reset card decks.</p>{" "}
-          <p>
-            Made by <a href="https://github.com/munjoonteo">@munjoonteo</a> and{" "}
-            <a href="https://github.com/ilyues">@ilyues</a>.
-          </p>
-        </div>
-      </div>
+      <Credits />
       <div className={levelsStyles}>{buttons}</div>
       <div className={questionStyles}>
         <div className={titleStyles}>wnrs</div>
@@ -113,16 +99,7 @@ function App() {
           next card
         </button>
       </div>
-      <div className={historyStyles}>
-        <div className={historyTitleStyles}>previous cards</div>
-        <div className={cardContainerStyles}>
-          <div className={cardContainerScrollStyles}>
-            {cardHistory.map((qn) => (
-              <Card styleName={smallCardStyles} question={qn} key={qn} />
-            ))}
-          </div>
-        </div>
-      </div>
+      <CardHistory cardHistory={cardHistory} />
     </div>
   );
 }

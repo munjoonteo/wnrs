@@ -1,6 +1,6 @@
 import { style } from "@vanilla-extract/css";
 
-import { primaryAccent } from "./globals.css";
+import { primaryAccent, primaryAccentMuted } from "./globals.css";
 
 export const appStyles = style({
   textAlign: "center",
@@ -47,7 +47,7 @@ export const levelButtonStlyes = style({
   cursor: "pointer",
 
   ":hover": {
-    backgroundColor: "#ad0014",
+    backgroundColor: primaryAccentMuted,
     color: "rgb(240, 240, 240)",
   },
   selectors: {
@@ -81,7 +81,7 @@ export const nextCardButtonStlyes = style({
   border: "none",
 
   ":hover": {
-    backgroundColor: "#ad0014",
+    backgroundColor: primaryAccentMuted,
     color: "rgb(240, 240, 240)",
   },
 });
@@ -93,41 +93,4 @@ export const questionStyles = style({
   width: "40vw",
   textTransform: "uppercase",
   alignItems: "center",
-});
-
-export const historyStyles = style({
-  display: "flex",
-  flexDirection: "column",
-  width: "30vw",
-  alignContent: "center",
-  alignItems: "center",
-  padding: 5,
-});
-
-export const historyTitleStyles = style({
-  textTransform: "uppercase",
-  color: primaryAccent,
-  fontSize: 18,
-  fontWeight: 800,
-});
-
-export const cardContainerStyles = style({
-  height: "75vh",
-  width: "25vw",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  alignContent: "center",
-  margin: 10,
-  borderRadius: 15,
-  border: `solid 2px ${primaryAccent}`,
-});
-
-export const cardContainerScrollStyles = style({
-  width: "96%",
-  height: "96%",
-  overflowY: "scroll",
-  overflowX: "hidden",
-  margin: "auto",
 });
