@@ -1,9 +1,20 @@
-import "./App.css";
-
+import clsx from "clsx";
 import React from "react";
 
 import { levelOne, levelThree, levelTwo } from "./assets/levels";
 import Card from "./components/card/Card";
+import { bigCardStyles } from "./components/card/Card.css";
+import Credits from "./components/credits/Credits";
+import CardHistory from "./components/history/CardHistory";
+import {
+  appStyles,
+  levelButtonStyles,
+  levelsStyles,
+  nextCardButtonStlyes,
+  questionStyles,
+  selectedLevelStyles,
+  titleStyles,
+} from "./styles/app.css";
 
 function shuffle<T>(array: T[]) {
   let currentIndex = array.length;
@@ -51,7 +62,7 @@ function App() {
 
   const buttons = (Object.keys(levels) as levelKey[]).map((level) => (
     <button
-      className={`level-button ${level === currLevel ? "selected-level" : ""}`}
+      className={clsx(levelButtonStyles, { [selectedLevelStyles]: level === currLevel })}
       onClick={() => handleChangeLevel(level)}
       key={level}
     >
@@ -78,37 +89,17 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <div className="credits">
-        <div className="credits-title">how & who</div>
-        <div className="cont">
-          <b>How to play:</b> <br />
-          Progress from level to level. Become more than strangers, one card at a time.
-          <p>Refresh to reset card decks.</p>{" "}
-          <p>
-            Made by <a href="https://github.com/munjoonteo">@munjoonteo</a> and{" "}
-            <a href="https://github.com/ilyues">@ilyues</a>.
-          </p>
-        </div>
-      </div>
-      <div className="levels">{buttons}</div>
-      <div className="question">
-        <div className="title">wnrs</div>
-        <Card styleName="big-card" question={currCard} />
-        <button className="next-card-button" onClick={() => handleNextCard()}>
+    <div className={appStyles}>
+      <Credits />
+      <div className={levelsStyles}>{buttons}</div>
+      <div className={questionStyles}>
+        <div className={titleStyles}>wnrs</div>
+        <Card styleName={bigCardStyles} question={currCard} />
+        <button className={nextCardButtonStlyes} onClick={() => handleNextCard()}>
           next card
         </button>
       </div>
-      <div className="history">
-        <div className="history-title">previous cards</div>
-        <div className="card-container">
-          <div className="card-container-scroll">
-            {cardHistory.map((qn) => (
-              <Card styleName="small-card" question={qn} key={qn} />
-            ))}
-          </div>
-        </div>
-      </div>
+      <CardHistory cardHistory={cardHistory} />
     </div>
   );
 }
