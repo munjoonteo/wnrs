@@ -33,9 +33,7 @@ export const levelOne = [
   "Do you think I was popular in school? explain.",
   "Do you think I've ever been fired from a job? If so, what for?",
   "Do you think I intimidate others? why or why not?",
-  "How likely am I to go camping? how high maintenance is my set up?",
   "What about me is most strange or unfamiliar to you?",
-  "If myspace were still a thing, what would my profile song be?",
   "What about me intrigues you?",
   "What does my style tell you about me?",
   "Do you think I've ever had my heart broken?",
@@ -173,3 +171,7 @@ export const levelThree = [
   "What do you recommend I let go of, if anything?",
   "In one word, describe how you feel right now",
 ];
+
+export const finalLevel = [
+  "This is your final level card",
+]
