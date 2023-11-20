@@ -171,3 +171,7 @@ export const levelThree = [
   "What do you recommend I let go of, if anything?",
   "In one word, describe how you feel right now",
 ];
+
+export const finalLevel = [
+  "This is your final level card",
+]
